@@ -1,11 +1,11 @@
-$(function() {
+$(function () {
 
   "use strict";
 
   var topoffset = 50; //variable for menu height
   var slideqty = $('#featured .item').length;
   var wheight = $(window).height(); //get the height of the window
-  var randSlide = Math.floor(Math.random()*slideqty);
+  var randSlide = Math.floor(Math.random() * slideqty);
 
   $('#featured .item').eq(randSlide).addClass('active');
 
@@ -14,14 +14,14 @@ $(function() {
 
 
   //replace IMG inside carousels with a background image
-  $('#featured .item img').each(function() {
+  $('#featured .item img').each(function () {
     var imgSrc = $(this).attr('src');
-    $(this).parent().css({'background-image': 'url('+imgSrc+')'});
+    $(this).parent().css({ 'background-image': 'url(' + imgSrc + ')' });
     $(this).remove();
   });
 
   //adjust height of .fullheight elements on window resize
-  $(window).resize(function() {
+  $(window).resize(function () {
     wheight = $(window).height(); //get the height of the window
     $('.fullheight').css('height', wheight); //set to window tallness  
   });
@@ -36,7 +36,7 @@ $(function() {
 
   // add inbody class
   var hash = $(this).find('li.active a').attr('href');
-  if(hash !== '#featured') {
+  if (hash !== '#featured') {
     $('header nav').addClass('inbody');
   } else {
     $('header nav').removeClass('inbody');
@@ -44,9 +44,9 @@ $(function() {
 
 
   // Add an inbody class to nav when scrollspy event fires
-  $('.navbar-fixed-top').on('activate.bs.scrollspy', function() {
+  $('.navbar-fixed-top').on('activate.bs.scrollspy', function () {
     var hash = $(this).find('li.active a').attr('href');
-    if(hash !== '#featured') {
+    if (hash !== '#featured') {
       $('header nav').addClass('inbody');
     } else {
       $('header nav').removeClass('inbody');
@@ -55,15 +55,15 @@ $(function() {
 
 
   //Use smooth scrolling when clicking on navigation
-  $('.navbar a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') === 
-      this.pathname.replace(/^\//,'') && 
+  $('.navbar a[href*=#]:not([href=#])').click(function () {
+    if (location.pathname.replace(/^\//, '') ===
+      this.pathname.replace(/^\//, '') &&
       location.hostname === this.hostname) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top-topoffset+2
+          scrollTop: target.offset().top - topoffset + 2
         }, 500);
         return false;
       } //target.length
@@ -71,7 +71,7 @@ $(function() {
   }); //smooth scrolling
 
   //Automatically generate carousel indicators
-  for (var i=0; i < slideqty; i++) {
+  for (var i = 0; i < slideqty; i++) {
     var insertText = '<li data-target="#featured" data-slide-to="' + i + '"';
     if (i === randSlide) {
       insertText += ' class="active" ';
@@ -83,5 +83,19 @@ $(function() {
   $('.carousel').carousel({
     pause: false
   });
-
+  // cnc
+  //scroll up
+  $('.scrollToTop').css({ display: 'none' });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1000) {
+      $('.scrollToTop').fadeIn();
+    }
+    else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  $('.scrollToTop').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 800);
+    return false;
+  });
 });

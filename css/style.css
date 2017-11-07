@@ -265,23 +265,23 @@ and (max-width: 768px) {
   background-color: rgba(239,240,196,.9);
 }
 
-#testimonials #janeh {
-  background: url(../images/testimonial-janeh.jpg) no-repeat center center;
+#testimonials #testimonial1 {
+  background: url(../images/testimonial-1.jpg) no-repeat center center;
   background-size: cover;
 }
 
-#testimonials #johnb {
-  background: url(../images/testimonial-johnb.jpg) no-repeat center center;
+#testimonials #testimonial2 {
+  background: url(../images/testimonial-2.jpg) no-repeat center center;
   background-size: cover;
 }
 
-#testimonials #mcphersons {
-  background: url(../images/testimonial-mcphersons.jpg) no-repeat center center;
+#testimonials #testimonial3 {
+  background: url(../images/testimonial-3.jpg) no-repeat center center;
   background-size: cover;
 }
 
-#testimonials #lorraines {
-  background: url(../images/testimonial-lorraines.jpg) no-repeat center center;
+#testimonials #testimonial4{
+  background: url(../images/testimonial-4.jpg) no-repeat center center;
   background-size: cover;
 }
 

@@ -183,28 +183,28 @@ header .inbody .navbar-brand span.subhead {
   border-top: 20px solid rgba(238, 200, 86, .5);
 }
 
-/**  Page -- Services **/
+/**  Page -- Publications **/
 
-.service {
+.publication {
   margin: 20px 0;
   text-align: center;
 }
 
-#services img.icon {
+#publications img.icon {
   display: block;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 5px;
 }
 
-#services h3 {
+#publications h3 {
   margin-bottom: 10px;
 }
 
 /*@media only screen 
 and (min-width: 450px)
 and (max-width: 768px) {
-  .service p {
+  .publication p {
     padding: 0 20%;
   }
 }*/

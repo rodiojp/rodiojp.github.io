@@ -36,6 +36,10 @@ header .navbar-default .navbar-nav a:hover {
   color: #EEC856;
 }
 
+header .navbar-default .navbar-nav a:focus {
+  color: white;
+}
+
 header .navbar-default .navbar-nav .active a {
   font-weight: 700;
   color: #EEC856;

@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/hover-min.css" type="text/css">
-    <script src="js/prefixfree.min.js"></script>
+     <!-- Flipbook StyleSheet -->
+    <link rel="stylesheet" href="css/dflip.css" type="text/css">
+    <!-- Icons Stylesheet -->
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <script src="js/prefixfree.min.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="alternate" hreflang="ru" href="http://podelki.by/" />
 
@@ -151,7 +155,7 @@
                 <div class="row">
                     <article class="publication col-xs-12 col-md-6">
                         <img class="icon" src="images/icon-podelki-1.jpg" alt="Альбом заданий по трудовому обучению 'Поделки 1'">
-                        <h3>Поделки 1</h3>
+                        <a href="#" onclick="openReader('books/podelki_01.pdf')">Пролистать альбом Поделки 1</a>
                         <p>Мы предлагаем специализированное издание альбом заданий по трудовому обучению "Поделки 1" для первого класса. Для изготовления каждой поделки, альбом содержит подробную инструкцию, необходимое количество бумаги, картона и ткани.</p>
                     </article>
 
@@ -304,10 +308,12 @@
                 <div class="col-sm-6">
                     <div>
                         <div>
-                            <p class="phone"></p>
+                            <img src="/images/logo-mts.png" alt="МТС">
+                            <span class="phone">+375 (29) 798-7901</span>
                         </div>
                         <div>
-                            <p class="phone"></p>
+                            <img src="/images/logo-velcom.png" alt="Велком">
+                            <span class="phone">+375 (44) 760-8354</span>
                         </div>
                     </div>
                     <p>
@@ -327,7 +333,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="js/myscript.js"></script>
+    <!-- Flipbook main Js file -->
+    <script src="js/dflip.js" type="text/javascript"></script>
+    <script src="js/myscript.js?ver=0.0.2" type="text/javascript"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(d, w, c) {

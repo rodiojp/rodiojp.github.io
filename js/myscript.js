@@ -99,3 +99,31 @@ $(function () {
     return false;
   });
 });
+
+function openReader(url) {
+
+  if (!window.dfLightBox) {
+      window.dfLightBox = new DFLightBox(function () {
+
+          if (window.location.hash.indexOf("#dflip-") == 0)
+              window.location.hash = "#_";
+          window.dfActiveLightBoxBook.dispose();
+          window.dfActiveLightBoxBook = null;
+      });
+  }
+
+  if (window.dfActiveLightBoxBook && window.dfActiveLightBoxBook.dispose) {
+      window.dfActiveLightBoxBook.dispose();
+
+  } else {
+      window.dfLightBox.show(
+              function () {
+                  DFLIP.defaults.enableDebugLog = $("#enableDebugLog").prop('checked');
+                  // document.title = decodeURIComponent(url.split("/").slice(-1));
+                  window.dfActiveLightBoxBook = $(dfLightBox.container).flipBook(url, {
+                      webgl: $("#webgl").prop('checked'), isLightBox: true
+                  });
+              }
+      );
+  }
+};

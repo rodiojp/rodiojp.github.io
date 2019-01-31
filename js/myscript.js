@@ -121,7 +121,7 @@ function openReader(url) {
                   DFLIP.defaults.enableDebugLog = $("#enableDebugLog").prop('checked');
                   // document.title = decodeURIComponent(url.split("/").slice(-1));
                   window.dfActiveLightBoxBook = $(dfLightBox.container).flipBook(url, {
-                      webgl: $("#webgl").prop('checked'), isLightBox: true
+                      webgl: $("#webgl").prop('checked'), isLightBox: true, backgroundColor: "#777"
                   });
               }
       );

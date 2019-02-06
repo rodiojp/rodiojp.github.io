@@ -194,6 +194,10 @@ header .inbody .navbar-brand span.subhead {
   text-align: center;
 }
 
+.publication div.flippingBook{
+  cursor:pointer;
+}
+
 #publications img.icon {
   display: block;
   width: 90%;
